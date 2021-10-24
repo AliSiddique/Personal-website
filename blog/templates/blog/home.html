@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="app" style="caret-color:blue; color:white; font-weight: 700; font-size: 50px; margin-top:100px;"></div>
+
+
+    </div>
+    <div class="col-md-6">
+      <h1  class="coola" style="font-weight: 700; font-size: 500px; padding-left: 100px;   text-shadow: 200px 20px #ff0000;">A</h1>
+    </div>
+
+  </div>
+
+</div>
+<!-- Footer -->
+
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+<script>
+  // typewrite js
+  var app = document.getElementById('app');
+
+  var typewriter = new Typewriter(app, {
+      loop: true
+  });
+
+  typewriter.typeString('<span>Hi my names <span style="color:red">Ali!</span></span><br>')
+      .pauseFor(2500)
+      .typeString('<br>I am a Web <span style="color:red">Developer!</span>')
+      .pauseFor(2500)
+      .deleteChars(10)
+      .typeString('<strong><span style="color:red">Designer!</span></strong>')
+      .pauseFor(7500)
+      .deleteAll()
+      .typeString('<strong>And a Graphic Designer!</strong>')
+      .start();
+
+</script>
+{% endblock %}

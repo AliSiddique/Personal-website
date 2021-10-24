@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAAAAAEREREQAAAAARERERAAAAABEREREAAAAAEREREREREREREREREREREREREREREREREREREREREREREREREAAAAREREREQAAABEREBEREAABEREAARERABEREAAAEREREREAAAABEREREAAAAAAREREAAAAAAAEREAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAfgAAAH4AAAg8EAAMGDAADgBwAA8A8AAPgfAAD8PwAA" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+
+
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="{% url 'home' %}" class="text-center">Home</a>
+  <a href="{% url 'about' %}" class="text-center">About me</a>
+  <a href="{% url 'skills' %}" class="text-center">Skills</a>
+  <a href="{% url 'contact' %}" class="text-center">Contact</a>
+</div>
+<span style="font-size:60px;cursor:pointer; padding:40px;" class="open"onclick="openNav()">&#9776;</span>
+
+<div id="main">
+
+
+{% block content%}{% endblock content%}
+
+</div>
+
+
+
+<footer class="page-footer font-small  darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center ">
+
+          <!-- Facebook -->
+          <a class="fb-ic iconss" target=”_blank” href="https://www.linkedin.com/in/alihsiddique/">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic iconss" target=”_blank” href="https://www.linkedin.com/in/alihsiddique/">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic iconss" target=”_blank” href="mailto:alisiddique0402@gmail.com">
+            <i class="fas fa-at fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic iconss" target=”_blank” href="https://www.linkedin.com/in/alihsiddique/">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic iconss" target=”_blank” href="https://www.linkedin.com/in/alihsiddique/">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic iconss"target=”_blank” href="https://github.com/AliSiddique">
+            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
+<div class="skillsstuff">
+  <h1 style="font-weight: 800; font-size: 70px;">Skills</h1>
+
+<div class="m-0">
+  <label>HTML</label>
+
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 100%">100%</div>
+  </div>
+
+    <label>CSS</label>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 90%">90%</div>
+    </div>
+
+    <label>JavaScript</label>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 60%">60%</div>
+    </div>
+
+
+
+    <label>Python(Django)</label>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 60%">60%</div>
+    </div>
+
+
+
+    <label>React</label>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 50%">50%</div>
+    </div>
+
+
+    <label>Bootstrap</label>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 90%">90%</div>
+    </div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+  {% load static %}
+  <img src="{% static 'blog/react.png'%}" id="react" alt="">
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+  {% endblock %}

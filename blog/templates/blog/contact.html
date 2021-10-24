@@ -1,0 +1,87 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4" style="font-size: 60px;">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I will contact you within
+        a matter of hours to help you.</p>
+
+    <div class="row con">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="{% url 'contact' %}" method="POST">
+           {% csrf_token %}
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <label for="name" class="">Your name</label>
+
+                            <input type="text" id="name" required name="name" class="form-control">
+                            <div class="error" id="nameErr"></div>
+
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <label for="email" class="">Your email</label>
+
+                            <input type="text" id="email" name="email" required class="form-control">
+                            <div class="error" id="emailErr"></div>
+
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                          <label for="message">Your message</label>
+
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                            <div class="error" id="messErr"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+<br>
+            <div class="text-center ">
+                <a class="send btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+
+
+{% endblock %}
