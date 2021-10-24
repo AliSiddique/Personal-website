@@ -41,6 +41,5 @@ def contact( request):
         Contact.email = email
         Contact.message = message
         Contact.save()
-        return render(request, 'blog/success.html')
 
     return render(request, 'blog/contact.html')
