@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-##+l_=w-=p(_)dqqo&9(4%l9v*@!h%n5(91dyyxv@$c%r$gt8m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.0.16', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.16', 'localhost', '127.0.0.1', 'needforuni.herokuapp.com']
 
 
 
@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['192.168.0.16', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+'whitenoise.runserver_nostatic',
     'django_filters',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
@@ -88,6 +89,9 @@ DATABASES = {
     }
 }
 
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
