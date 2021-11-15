@@ -41,6 +41,6 @@ def contact( request):
         Contact.email = email
         Contact.message = message
         Contact.save()
-        return HttpResponse("<h1>Thanks</h1>")
+        return render(request, 'blog/success.html')
 
     return render(request, 'blog/contact.html')
